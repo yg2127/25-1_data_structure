@@ -1,18 +1,16 @@
 # ninja log v6
-2	141	1743331767172656401	CMakeFiles/data_structure.dir/4-4.c.o	8467be2f575caa83
+0	24	1743332589690070106	CMakeFiles/data_structure.dir/4-4.c.o	8467be2f575caa83
 1	29	1743044561417980997	CMakeFiles/data_structure.dir/4-2.c.o	f20dfbfca79e5915
 1	42	1742439569078612450	CMakeFiles/data_structure.dir/3-5.c.o	d01db734f54e7ae2
 1	143	1742018995607316007	CMakeFiles/data_structure.dir/2-3.c.o	776838fb9c8810b
 0	35	1742438561578583098	CMakeFiles/data_structure.dir/3-4.c.o	d01b994541ad18b0
-23	47	1743044911521548189	data_structure	e7b09c33237149ed
+24	52	1743332589714039122	data_structure	3479bce19503f85d
 1	207	1742441000118004538	CMakeFiles/data_structure.dir/3-7.c.o	8649ba80afd3bd4b
 0	122	1742436695039276621	CMakeFiles/data_structure.dir/3-1.c.o	7574b50d1534fc9e
-1	38	1743331773201388067	build.ninja	dd610f72da4d7e05
+0	52	1743332646131183495	build.ninja	dd610f72da4d7e05
 2	47	1742437601785142319	CMakeFiles/data_structure.dir/3-3.c.o	64e5d490f4de0da4
 0	34	1742437456621168067	CMakeFiles/data_structure.dir/3-2.c.o	f732ae3c76462a09
 1	141	1743331767171706606	CMakeFiles/data_structure.dir/4-3.c.o	2167107a92cb726b
 2	46	1742440061054603900	CMakeFiles/data_structure.dir/3-6.c.o	5e608f9d8af52f1e
 0	51	1743042755212445539	CMakeFiles/data_structure.dir/4-1.c.o	408779ece143351
 2	39	1742813492541369874	CMakeFiles/data_structure.dir/repeat.c.o	1b544ee33b06f2a
-0	52	1743331773201388067	build.ninja	dd610f72da4d7e05
-1	32	1743331773206994299	data_structure	3479bce19503f85d
