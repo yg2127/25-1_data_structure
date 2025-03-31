@@ -2,19 +2,19 @@
 
 int main() {
     int n, m;
-    int arr[100][100] = {0};
+    int arr[100][100] = {0}; // n*m 전체배열을 0으로 채우기
     scanf("%d %d", &n, &m);
 
-    int r1 = 0, r2 = n-1;
-    int c1 = 0, c2 = m-1;
-    int val = 1;
+    int r1 = 0, r2 = n-1; // 변수설정
+    int c1 = 0, c2 = m-1; // 변수설정
+    int val = 1; // 지정된 위치에 들어갈 값
 
     while (1) {
-        if (r1 > r2 || c1 > c2) {
+        if (r1 > r2 || c1 > c2) { // 종료조건 r1 -> n까지, c1 -> m까지
             break;
         }
 
-        for (int j = c1; j <= c2; j++) {
+        for (int j = c1; j <= c2; j++) { //
             arr[r1][j] = val;
             val++;
         }
