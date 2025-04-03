@@ -55,6 +55,12 @@ build CMakeFiles/data_structure.dir/4-5.c.o: C_COMPILER__data_structure_unscanne
   OBJECT_DIR = CMakeFiles/data_structure.dir
   OBJECT_FILE_DIR = CMakeFiles/data_structure.dir
 
+build CMakeFiles/data_structure.dir/5.c.o: C_COMPILER__data_structure_unscanned_Debug /Users/yugeon/CLionProjects/data_structure/5.c || cmake_object_order_depends_target_data_structure
+  DEP_FILE = CMakeFiles/data_structure.dir/5.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/data_structure.dir
+  OBJECT_FILE_DIR = CMakeFiles/data_structure.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target data_structure
@@ -63,7 +69,7 @@ build CMakeFiles/data_structure.dir/4-5.c.o: C_COMPILER__data_structure_unscanne
 #############################################
 # Link the executable data_structure
 
-build data_structure: C_EXECUTABLE_LINKER__data_structure_Debug CMakeFiles/data_structure.dir/4-5.c.o
+build data_structure: C_EXECUTABLE_LINKER__data_structure_Debug CMakeFiles/data_structure.dir/4-5.c.o CMakeFiles/data_structure.dir/5.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   OBJECT_DIR = CMakeFiles/data_structure.dir
   POST_BUILD = :
