@@ -27,6 +27,10 @@ int length(Node* h, Node* t) {
 
 void insert(Node* h, Node* t, int rank, char data) {
     int size = length(h, t);
+    if (rank < 1 || rank > size + 1) {
+        printf("invalid position\n");
+        return;
+    }
     Node* cur = h;
     for (int i = 0; i < rank - 1; i++) {
         cur = cur->nxt;
@@ -43,6 +47,10 @@ void insert(Node* h, Node* t, int rank, char data) {
 
 void erase(Node* h, Node* t, int rank) {
     int size = length(h, t);
+    if (rank < 1 || rank > size) {
+        printf("invalid position\n");
+        return;
+    }
     Node* cur = h->nxt;
     for (int i = 0; i < rank - 1; i++) {
         cur = cur->nxt;
@@ -58,6 +66,11 @@ void erase(Node* h, Node* t, int rank) {
 }
 
 void getVal(Node* h, Node* t, int rank) {
+    int size = length(h, t);
+    if (rank < 1 || rank > size) {
+        printf("invalid position\n");
+        return;
+    }
     Node* cur = h->nxt;
     for (int i = 0; i < rank - 1; i++) {
         cur = cur->nxt;
