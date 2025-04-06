@@ -9,6 +9,43 @@ typedef struct Node { // 구조체 노드 선언
     struct Node* next;
 } Node;
 
+// 특정 값 뒤에 새 노드를 삽입하는 함수
+void insert_after(Node* head, int target, int new_data) {
+    Node* curr = head;
+    while (curr != NULL) {
+        if (curr->data == target) {
+            Node* new_node = (Node*)malloc(sizeof(Node));
+            new_node->data = new_data;
+            new_node->next = curr->next;
+            curr->next = new_node;
+            return;
+        }
+        curr = curr->next;
+    }
+    printf("삽입 실패: %d를 찾을 수 없습니다.\n", target);
+}
+
+// 특정 값을 가진 노드를 삭제하는 함수
+void delete_value(Node** head_ref, int target) {
+    Node* curr = *head_ref;
+    Node* prev = NULL;
+
+    while (curr != NULL) {
+        if (curr->data == target) {
+            if (prev == NULL) {
+                *head_ref = curr->next;
+            } else {
+                prev->next = curr->next;
+            }
+            free(curr);
+            return;
+        }
+        prev = curr;
+        curr = curr->next;
+    }
+    printf("삭제 실패: %d를 찾을 수 없습니다.\n", target);
+}
+
 void free_list(Node* head) { // 동적할당 해제
     Node* curr = head;
     Node* next_node;
