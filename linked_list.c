@@ -79,6 +79,12 @@ int main() {
         }
     }
 
+    // 예시: 3 뒤에 99 삽입
+    insert_after(head, 3, 99);
+
+    // 예시: 값이 1인 노드 삭제
+    delete_value(&head, 1);
+
     // 연결리스트 출력코드
     Node* curr = head;
     while (curr != NULL) {

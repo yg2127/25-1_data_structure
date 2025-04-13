@@ -89,8 +89,8 @@ void show(Node* h, Node* t) {
 }
 
 int main() {
-    Node* h = newNode(0);
-    Node* t = newNode(0);
+    Node* h = newNode(0); //헤더
+    Node* t = newNode(0); //트레일러
     h->nxt = t;
     t->prv = h;
 
