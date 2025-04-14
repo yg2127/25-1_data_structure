@@ -4,4 +4,5 @@ project(data_structure C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(data_structure
-        6.c)
+        linked_list.c
+        linked2.c)
