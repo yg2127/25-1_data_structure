@@ -1,9 +1,4 @@
-//
-// Created by 유건 on 25. 3. 27.
-//
-//
-// Created by 유건 on 25. 3. 27.
-//
+
 #include<stdio.h>
 
 void swap(int *p,int a,int b){
