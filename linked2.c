@@ -50,13 +50,20 @@ int main() {
         if (n2 < 0) break;
 
         curr = head;
-        curr_prev = NULL;
+        curr_prev = NULL; // 현제 노드 이전의 노드
 
         while (1) {
-            if (curr -> num == n2) break;
-            else curr = curr -> next;
+            if (curr -> num == n2) {
+                break;
+            }
+            else {
+                curr_prev = curr; // 현재 노드가 이전의 노드 curr_prev가 되고
+                curr = curr -> next; // 다음 노드가 현재 노드로 변한다.
+            }
         }
 
-        curr
+        printf("%d를 삭제합니다", curr->num);
+        curr_prev->next = curr->next; // 이전노드의 다음노드는 현재노드(삭제할 노드)의 다음노드와 연결
+        free(curr); // curr 동적할당 해제
     }
 }
