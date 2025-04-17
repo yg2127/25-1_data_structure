@@ -4,4 +4,5 @@ project(data_structure C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(data_structure
-        double_linked_list.c)
+        250417-1.c
+        second_5.c)
