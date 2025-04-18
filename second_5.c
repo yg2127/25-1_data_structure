@@ -28,10 +28,10 @@ Node* search(Node* Head, int num) {
     Node* curr = Head;
     for (int i = 1; i < num; i++) {
         curr = curr -> next;
-    }
-    if (curr -> next == NULL) {
-        printf("invalid position\n");
-        return NULL;
+        if (curr -> next == NULL) {
+            printf("invalid position\n");
+            return NULL;
+        }
     }
     return curr;
 }
@@ -41,15 +41,15 @@ void addnode(Node* curr, char data) {
     newnode -> data = data;
     newnode -> prev = curr -> prev;
     newnode -> next = curr;
-    curr -> prev -> next = newnode;
-    curr -> prev = newnode;
+    if (curr -> prev != NULL) (curr -> prev) -> next = newnode;
+    else curr = newnode;
 }
 void append(Node* Head, int num, char data) {
     Node* curr = search(Head, num);
     if (curr == NULL) {
         return;
     }
-    addnode(&curr, data);
+    addnode(curr, data);
 }
 
 //============노드제거===========================
@@ -60,7 +60,7 @@ char removeNode(Node* curr) {
     free(curr);
     return e;
 }
-char remove(Node* Head, int num) {
+char removeN(Node* Head, int num) {
     Node* curr = search(Head, num);
     if (curr == NULL) {
         return '\0';
@@ -84,7 +84,7 @@ int main() {
         }
         else if (c == 'D') {
             scanf("%d", &num);
-            remove(Head, num);
+            char e = removeN(Head, num);
         }
         else if (c == 'G') {
             scanf("%d", &num);
