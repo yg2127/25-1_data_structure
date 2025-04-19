@@ -42,7 +42,7 @@ void addnode(Node* curr, char data) {
     newnode -> prev = curr -> prev;
     newnode -> next = curr;
     if (curr -> prev != NULL) (curr -> prev) -> next = newnode;
-    else curr = newnode;
+    else ;
 }
 void append(Node* Head, int num, char data) {
     Node* curr = search(Head, num);
@@ -69,12 +69,11 @@ char removeN(Node* Head, int num) {
 }
 //================메인함수======================
 int main() {
-    int n, num;
+    int n, num, list_num;
     Node *Head, *Tail, *curr;
     init(&Head, &Tail);
     scanf("%d", &n);
     char c, data;
-    int number;
     for (int i = 0; i < n; i++) {
         scanf(" %c", &c);
         if (c == 'A') {
