@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(data_structure
         middle_test_practice/02.c
-        middle_test_practice/03.c)
+        middle_test_practice/03.c
+        jiho_linked_list.c)

@@ -1,8 +1,9 @@
 # ninja log v6
-2	47	1742437601785142319	CMakeFiles/data_structure.dir/3-3.c.o	64e5d490f4de0da4
-1	41	1744858987855216722	CMakeFiles/data_structure.dir/7-2.c.o	c00bc1f145a41205
+2	35	1745052919291917558	CMakeFiles/data_structure.dir/middle_test_practice/02.c.o	370a65ad64685197
 1	28	1744631621359987645	CMakeFiles/data_structure.dir/test.c.o	f9274c485affd6d1
-0	42	1745054125510884334	build.ninja	dd610f72da4d7e05
+1	41	1744858987855216722	CMakeFiles/data_structure.dir/7-2.c.o	c00bc1f145a41205
+2	47	1742437601785142319	CMakeFiles/data_structure.dir/3-3.c.o	64e5d490f4de0da4
+0	42	1745060433001536447	build.ninja	dd610f72da4d7e05
 4	164	1744631240274034377	CMakeFiles/data_structure.dir/linked_list.c.o	505758c9c1a1e40d
 1	34	1745050899885846539	CMakeFiles/data_structure.dir/middle_test_practice/01.c.o	10a7a8289dab576b
 1	45	1744897734001675893	CMakeFiles/data_structure.dir/250417-1.c.o	205c4da99f7b1a5c
@@ -17,11 +18,10 @@
 0	51	1743042755212445539	CMakeFiles/data_structure.dir/4-1.c.o	408779ece143351
 0	24	1744631395071987422	CMakeFiles/data_structure.dir/4-3.c.o	2167107a92cb726b
 0	34	1742437456621168067	CMakeFiles/data_structure.dir/3-2.c.o	f732ae3c76462a09
-2	160	1744252057101900834	CMakeFiles/data_structure.dir/6.c.o	9789b4205fd5a3b8
-0	35	1742438561578583098	CMakeFiles/data_structure.dir/3-4.c.o	d01b994541ad18b0
-1	143	1742018995607316007	CMakeFiles/data_structure.dir/2-3.c.o	776838fb9c8810b
-2	35	1745052919291917558	CMakeFiles/data_structure.dir/middle_test_practice/02.c.o	370a65ad64685197
 1	29	1743044561417980997	CMakeFiles/data_structure.dir/4-2.c.o	f20dfbfca79e5915
 5	144	1744644071556079124	CMakeFiles/data_structure.dir/double_linked_list.c.o	fe6f893614e41b86
+1	143	1742018995607316007	CMakeFiles/data_structure.dir/2-3.c.o	776838fb9c8810b
+0	35	1742438561578583098	CMakeFiles/data_structure.dir/3-4.c.o	d01b994541ad18b0
+2	160	1744252057101900834	CMakeFiles/data_structure.dir/6.c.o	9789b4205fd5a3b8
 1	46	1744858171033764207	CMakeFiles/data_structure.dir/7-1.c.o	4fc0953dfc67315
 1	42	1743647322511802527	CMakeFiles/data_structure.dir/5.c.o	b314f1843cd809d0
