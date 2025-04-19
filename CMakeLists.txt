@@ -4,4 +4,5 @@ project(data_structure C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(data_structure
-        second_5.c)
+        middle_test_practice/02.c
+        middle_test_practice/03.c)
