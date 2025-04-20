@@ -35,7 +35,6 @@ void add(ListType *L,int pos,element e)
         L->H = node;
         L->T = node;
         node->next = NULL;
-
     }
     else if(pos==1)
     {
