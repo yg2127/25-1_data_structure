@@ -1,0 +1,12 @@
+appendTerm이 newnode를 추가하는 과정은 단일연결리스트의 Tail
+앞 노드의 뒤에 추가해야 함. 그래서 searchlast노드는 Tail 바로 전 노드를 출력하고 appendTerm에서는
+searchlast노드의 뒤에 노드를 추가한다.
+
+node 연결과정은
+
+curr -> next = newnode; (원래 curr -> next = Tail 이였음)
+newnode -> next = Tail;
+1번리스트와 2번리스트는 입력과정에서 자동으로 내림차순 차수정렬이 되어있음.
+
+addpoly는 void로 하고 Head3와 Tail3사이의 주소값을 1과2의 합으로 한다.
+addpoly할 때 1번과 2번은 차수가 내림차순 정렬되어 있으므로 앞에서부터 뒤로 내려가면 된다.
