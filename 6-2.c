@@ -20,7 +20,7 @@ void init(Node **Head, Node **Tail) {
     (*Head) -> next = (*Tail);
 }
 //============================================================================
-Node* searchlast(Node* Head, Node* Tail) { //범위 = Head ~ Tail 전 노드
+Node* searchlast(Node* Head, Node* Tail) { //범위 = Head ~ Tail 전 노드 (가장 마지막 노드 반환)
     Node* curr = Head;
     while (curr -> next != Tail) {
         curr = curr -> next;
@@ -39,34 +39,36 @@ void appendTerm(Node* Head, Node* Tail, int coef1, int exp1) { // search 바로 다
     newnode -> next = Tail;
 }
 
-void addPoly(Node* Head1, Node* Tail1, Node* Head2, Node* Tail2, Node* Head3, Node* Tail3) {
-    Node *curr1 = Head1, *curr2 = Head2, *curr3 = Head3;
+void addPoly(Node* Head1, Node* Tail1, Node* Head2, Node* Tail2, Node** Head3, Node** Tail3) {
+    Node *curr1 = Head1 -> next, *curr2 = Head2 -> next;
+
     int sum_c, sum_e;
     // Head부터 시작해야 appendTerm함수가 Head 다음에 노드를 추가한다
-    while (curr1 != Tail1 || curr2 != Tail2) {
+    while (curr1 != Tail1 && curr2 != Tail2) { // 둘 다 Tail 노드가 아닐 경우에만 조건통과
         if (curr1 -> exp > curr2 -> exp) {
-            appendTerm(Head3, Tail3, curr1 -> coef, curr1->exp);
+            appendTerm(*Head3, *Tail3 , curr1 -> coef, curr1->exp);
             curr1 = curr1 -> next;
         }
         else if (curr1 -> exp < curr2 -> exp) {
-            appendTerm(Head3, Tail3, curr2 -> coef, curr2 -> exp);
+            appendTerm(*Head3,*Tail3 , curr2 -> coef, curr2 -> exp);
             curr2 = curr2 -> next;
         }
         else {
             sum_c = curr1 -> coef + curr2 -> coef;
-            sum_e = curr1 -> exp + curr2 -> exp;
-            appendTerm(Head3, Tail3, sum_c, sum_e);
+            sum_e = curr1 -> exp;
+            if (sum_c != 0) appendTerm(*Head3,*Tail3 , sum_c, sum_e);
             curr1 = curr1 -> next, curr2 = curr2 -> next;
         }
     }
     while (curr1 != Tail1) {
-        appendTerm(Head3, Tail3, curr1 -> coef, curr1 -> exp);
+        appendTerm(*Head3,*Tail3 , curr1 -> coef, curr1 -> exp);
         curr1 = curr1 -> next;
     }
     while (curr2 != Tail2) {
-        appendTerm(Head3, Tail3, curr2 -> coef, curr2 -> exp);
+        appendTerm(*Head3, *Tail3, curr2 -> coef, curr2 -> exp);
         curr2 = curr2 -> next;
     }
+
 }
 //==============================================================================
 int main() {
@@ -88,10 +90,12 @@ int main() {
         scanf("%d", &exp2);
         appendTerm(Head2, Tail2, coef2, exp2);
     }
+    addPoly(Head1, Tail1, Head2, Tail2, &Head3, &Tail3);
+
     curr = Head3 -> next;
     while (curr != Tail3) {
-        printf("%d ", curr -> coef);
-        printf("%d ", curr -> exp);
-        curr = curr -> next;
+        printf("%d ", curr->coef);
+        printf("%d ", curr->exp);
+        curr = curr->next;
     }
 }

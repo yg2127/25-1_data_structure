@@ -22,6 +22,7 @@ void init(ListType* L)
     L->T = NULL;
     L->size = 0;
 }
+//=========================================================================
 void add(ListType *L,int pos,element e)
 {
     ListNode* node = (ListNode*)malloc(sizeof(ListNode));
@@ -68,7 +69,6 @@ void add(ListType *L,int pos,element e)
     }
     L->size++;
 }
-
 void delete(ListType *L,int pos)
 {
     ListNode* p = L->H, * q, * r = L->T,*s;
@@ -128,7 +128,7 @@ void print(ListType *L)
     }
     printf("\n");
 }
-
+//=========================================================================
 int main() {
     int n,i,m;
     char c1, c2;
