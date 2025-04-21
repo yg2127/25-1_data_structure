@@ -28,21 +28,22 @@ void init(Node** Head, Node** Tail) {
 Node* search(Node* Head, Node* Tail, int l_n) { // 더미노드만 있을 때 1 입력시 Tail 반환
     Node* curr = Head;
     for (int i = 0; i < l_n; i++) {
+        if (curr == NULL) {
+            return NULL;
+        }
         curr = curr -> next;
     }
-    if (curr == NULL || curr == Head) {
-        return NULL;
-    }
+
     return curr; // Head 앞 노드 ~ Tail 노드까지 반환가능
 }
 Node* add(Node* Head, Node* Tail, int l_n, char data) { // l_n 위치의 노드를 뒤로 밀어내고 삽입
     Node* curr = search(Head, Tail, l_n); // 해당 노드 앞에 삽입해야함
-    Node* newnode = getnode();
     if (curr == NULL) {
         printf("invalid position\n");
         return Head;
     }
 
+    Node* newnode = getnode();
     newnode -> data = data;
 
     newnode -> next = curr;

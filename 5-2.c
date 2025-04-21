@@ -30,7 +30,7 @@ Node* search(Node* Head, int l_num) { // search의 범위 = Head 다음노드 ~ Tail까�
         if (curr == NULL) {
             printf("invalid position\n");
             return NULL;
-        }
+         }
     }
     return curr;
 }
