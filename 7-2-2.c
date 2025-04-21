@@ -23,16 +23,16 @@ Node* search(Node* setA) { // 맨 마지막 노드를 반환
     return curr;
 }
 int contain(Node* setA, int data) { // 포함여부 검사
-    Node* curr = setA;
-    while (curr -> next != NULL) {
+    Node* curr = setA; // Header
+    while (1) {
         if (curr -> data == data) return 1; // 있으면 1 반환 (추가하면 안됨)
-        curr = curr -> next;
+        if (curr -> next == NULL) break;
+        else curr = curr -> next;
     }
     return 0; // 없으면 0 반환 (추가해야함)
 }
 Node* add(Node* setA, int data) { // 맨 뒤쪽에 노드추가
     if (contain(setA, data)) return setA; // 집합에 이미 존재할 경우 원형 그대로 반환
-
     Node* newnode = getnode(data);
     newnode -> data = data;
     Node* Tail = search(setA);
@@ -102,7 +102,7 @@ void print(Node* set) { //공집합이라면(헤더노드만 있으면) 0 출력 아니라면 원소 �
 }
 //============================================================================================
 int main() {
-    Node *setA, *setB;
+    Node *setA, *setB, *setU, *setI;
     setA = getnode(); // A의 헤더설정
     setB = getnode(); // B의 헤더설정
 
@@ -117,7 +117,8 @@ int main() {
         scanf("%d", &data);
         setB = add(setB, data);
     }
-
-    print(union1(setA,setB));
-    print(intersect1(setA,setB));
+    setU = union1(setA,setB);
+    setI = intersect1(setA,setB);
+    print(setU);
+    print(setI);
 }
