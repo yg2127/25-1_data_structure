@@ -25,5 +25,5 @@ int main() {
     scanf("%d", &n2);
 
     dev n = devider(n1,n2);
-    printf("%d %d", dev.d, dev.r);
+    printf("%d %d", n.d, n.r);
 }
