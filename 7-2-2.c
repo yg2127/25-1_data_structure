@@ -72,7 +72,7 @@ Node* intersect1(Node* setA, Node* setB) { // A와B 둘 중 하나 작은걸 contain이 1
     Node* setI = getnode();
     Node *currA = setA -> next, *currB = setB -> next;
 
-    while (currA -> next != NULL && currB -> next != NULL) {
+    while (currA != NULL && currB != NULL) {
         if (currA -> data < currB -> data) {
             currA = currA -> next;
         }
@@ -89,7 +89,7 @@ Node* intersect1(Node* setA, Node* setB) { // A와B 둘 중 하나 작은걸 contain이 1
 }
 void print(Node* set) { //공집합이라면(헤더노드만 있으면) 0 출력 아니라면 원소 출력
     if (set -> next == NULL) { // 헤더노드만 있으면?
-        printf("0\n"); // 0 출력
+        printf(" 0\n"); // 0 출력
     }
     else {
         Node* curr = set -> next; // 헤더노드 제외
