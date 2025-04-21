@@ -1,3 +1,5 @@
+<!-- .github/pull_request_template.md -->
+
 ## ? Bug Fix PR Template
 
 ### ? 문제 설명
