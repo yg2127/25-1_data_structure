@@ -1,21 +1,21 @@
-<!-- .github/pull_request_template.md -->
+<!-- .github/PULL_REQUEST_TEMPLATE/debug_template.md -->
 
-## ? Bug Fix PR Template
+? Bug Fix PR Template
 
-### ? 문제 설명
+? 문제 설명
 <!-- 어떤 문제가 있었는지 명확히 설명해 주세요 -->
 - 
-
-### ?? 수정한 내용
+-
+?? 수정한 내용
 <!-- 어떻게 수정했는지 설명해주세요 -->
 - 
 
-### ? 테스트 내역
+? 테스트 내역
 <!-- 테스트는 어떻게 했는지, 어떤 케이스를 고려했는지 -->
 - [ ] 기존 문제 재현 테스트
 - [ ] 수정된 기능 정상 동작 확인
 
-### ? 참고 이슈
+? 참고 이슈
 Closes #
 
 ---
