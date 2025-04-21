@@ -9,15 +9,15 @@ int gcd1(int a, int b) {
     }
     return gcd1(b, a % b);
 }
-ing gcd2 (int a, int b) {
-    if (a == b) {
-        return a;
+int gcd2 (int a, int b) {
+    if (a < b) {
+        return gcd2(a, b - a);
     }
     else if (a > b) {
         return gcd2(a-b,b);
     }
     else {
-        return gcd2(a, a-b);
+        return a;
     }
 }
 int main() {
