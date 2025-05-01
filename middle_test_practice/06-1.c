@@ -77,5 +77,4 @@ int main() {
         addTerm(HeadB, co, ex);
     }
     addpoly(HeadA,HeadB,HeadC);
-
 }
