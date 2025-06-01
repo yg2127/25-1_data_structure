@@ -8,12 +8,14 @@ typedef struct Node {
     char data;
     struct Node* prev;
 }Node;
+
 Node* getnode() { // 동적할당 함수
     Node* newnode = (Node*)malloc(sizeof(Node)); // 동적할당
     newnode -> prev = NULL; // 이전 노드 NULL 처리
     newnode -> next = NULL; // 다음 노드 NULL 처리
     return newnode; // 노드 반환
 }
+
 Node* init(Node** Head, Node** Tail) {
     *Head = getnode();
     *Tail = getnode();
@@ -101,5 +103,4 @@ int main() {
             print(Head);
         }
     }
-
 }
