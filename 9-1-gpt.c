@@ -6,7 +6,7 @@
 
 // ======================= 구조체 정의 =========================
 typedef struct {
-    char* data;   // 문자형 스택
+    char* data;   // 문자열 스택
     int top;      // top 위치
     int size;     // 최대 크기
 } Stack;
