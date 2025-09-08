@@ -54,7 +54,7 @@ int main() {
             else if (rdata[j] == '-') {
                 d1 = pop(s);
                 d2 = pop(s);
-                push(s,d1-d2);
+                push(s,d2-d1);
             }
             else if (rdata[j] == '*') {
                 d1 = pop(s);
@@ -64,7 +64,7 @@ int main() {
             else if (rdata[j] == '/') {
                 d1 = pop(s);
                 d2 = pop(s);
-                push(s,d1/d2);
+                push(s,d2/d1);
             }
         }
         printf("%d\n", pop(s));
